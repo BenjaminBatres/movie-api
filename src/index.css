@@ -624,7 +624,7 @@ header {
 
 }
 @media (max-width: 665px) {
-  .nav__link:not(:nth-child(1)) {
+  .nav__link:not(:nth-child(3)) {
     display: none;
   }
 
