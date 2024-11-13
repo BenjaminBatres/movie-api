@@ -11,12 +11,17 @@ const FindYourMovie = () => {
     const [movies, setMovies] = useState([]);
     const [sortOrder, setSortOrder] = useState('latest');
     const [searchTerm, setSearchTerm] = useState('')
+    const [isLoading, setIsLoading] = useState(true)
     async function fetchMovie() {
         const { data } = await axios.get(
             `https://www.omdbapi.com/?s=${searchTerm || search}=&apikey=4053be5e`
           );
           if(data.Search) {
               setMovies(data.Search);
+              setTimeout(() => {
+                  setIsLoading(false)
+                
+              }, 250);
               if(sortOrder === 'latest') {
                   data.Search.sort((a, b) => parseInt(b.Year) - parseInt(a.Year));
               }
@@ -33,7 +38,7 @@ const FindYourMovie = () => {
     <>
         <SearchBox searchTerm={searchTerm} setSearchTerm={setSearchTerm}/>
         <MovieResults sortOrder={sortOrder} searchTerm={searchTerm} search={search} setSortOrder={setSortOrder}/>
-        <Movies movies={movies}/>
+        <Movies movies={movies} isLoading={isLoading}/>
     </>
   )
 };

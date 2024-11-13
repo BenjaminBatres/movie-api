@@ -19,7 +19,7 @@ const Nav = () => {
           </li>
           <li className="nav__link">
             <a
-              href="/"
+              href="#movie-search"
               className="nav__link--anchor link__hover-effect"
             >
               Find your movie

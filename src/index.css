@@ -36,6 +36,21 @@ button {
   border: none;
 }
 
+.search-btn {
+  position: absolute;
+  background-color: #882c6f;
+  border-radius: 0px 10px 10px 0px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  line-height: 1;
+  width: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
 .row {
   max-width: 1200px;
   margin: 0 auto;
@@ -63,6 +78,25 @@ button {
   100% {
     opacity: 1;
   }
+}
+
+@keyframes spinner {
+  0% {
+      transform: rotate(0);
+  }
+
+  100% {
+      transform: rotate(360deg);
+  }
+}
+
+.display-flex {
+  display: flex;
+  justify-content: center;
+}
+.bi-arrow-clockwise {
+  color: #882c6f;
+  animation: spinner 750ms infinite linear;
 }
 
 /* 
@@ -162,7 +196,7 @@ header {
   margin-bottom: 12px;
 }
 
-.header__container, 
+.header__container,
 header {
   display: flex;
   align-items: center;
@@ -184,7 +218,6 @@ header {
   width: 100%;
   max-width: 550px;
 }
-
 
 .input__btn {
   position: relative;
@@ -478,6 +511,62 @@ header {
   opacity: 0.8;
 }
 
+/* 
+
+  SKELETON LOADING STATE
+  
+*/
+
+.movie__selected--title--skeleton {
+  width: 150px;
+  height: 30px;
+  background-color: #ddd;
+}
+
+.movie__selected--img {
+  width: 500px;
+  height: 550px;
+  background-color: #ddd;
+}
+
+.movie__summary--para--skeleton {
+  width: 510px;
+  height: 40px;
+  margin-top: 24px;
+  margin-bottom: 16px;
+  background-color: #ddd;
+}
+
+.watch-btn--skeleton {
+  display: flex;
+  align-items: center;
+  padding: 14px 28px;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 24px;
+  margin: 24px 0;
+  cursor: not-allowed;
+}
+
+.movie__row--skeleton {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.column--left {
+  width: 60%;
+}
+.column--right {
+  width: 40%;
+}
+
+.row-line--skeleton {
+  width: 50%;
+  height: 25px;
+  margin-bottom: 12px; 
+  background-color: lightgray;
+}
+
 @media (max-width: 805px) {
   h1,
   .header__title {
@@ -508,22 +597,31 @@ header {
   .custom-select {
     width: 200px;
   }
-
 }
 
 @media (max-width: 750px) {
   .movie__selected {
     flex-direction: column;
   }
-  
+
   .movie__selected--figure {
     width: 100%;
     justify-content: flex-start;
   }
-  
+
   .movie__selected--description {
     width: 100%;
   }
+
+  .movie__summary--para--skeleton {
+    width: 310px;
+  }
+
+  .column--left,
+  .column--right {
+    width: 50%;
+  }
+
 }
 @media (max-width: 665px) {
   .nav__link:not(:nth-child(1)) {
