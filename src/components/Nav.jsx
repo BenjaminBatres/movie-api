@@ -9,7 +9,9 @@ const Nav = () => {
     <nav>
       <div className="nav__container">
         <div className="logo__wrapper">
-          <h1>Movie API</h1>
+          <Link to='/'>
+            <h1>Movie API</h1>
+          </Link>
         </div>
         <div className="nav__links-list">
           <li className="nav__link">

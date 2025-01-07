@@ -1,6 +1,16 @@
-import React from "react";
+import React, {useState} from "react";
 
 const SearchBox = (props) => {
+  const [query, setQuery] = useState('');
+  const handleInputChange = (event) => {
+    setQuery(event.target.value);
+  };
+
+  const handleKeyDown = (event) => {
+    if (event.key === 'Enter') {
+      props.setSearchTerm(query);
+    }
+  };
   return (
     <div id="landing">
       <div className="header__container">
@@ -12,7 +22,8 @@ const SearchBox = (props) => {
             placeholder="Search movie title"
             id="movie-search"
             value={props.value}
-            onChange={(event) => props.setSearchTerm(event.target.value)}
+            onKeyDown={handleKeyDown}
+            onChange={handleInputChange}
           />
         </div>
 
