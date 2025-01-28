@@ -24,7 +24,7 @@ const navigate = useNavigate();
               xmlns="http://www.w3.org/2000/svg"
               width="20"
               height="20"
-              fill="currentColor"
+              fill="black"
               className="bi bi-search"
               viewBox="0 0 16 16"
             >
