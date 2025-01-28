@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { Link, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import noImage from "../assets/no-image.jpg";
 
 const MovieInfo = (props) => {
@@ -22,6 +22,7 @@ const MovieInfo = (props) => {
     }, 250);
   }
   useEffect(() => {
+    window.scrollTo(0, 0);
     fetchMovie();
   }, []);
 
@@ -56,11 +57,11 @@ const MovieInfo = (props) => {
                       />
                     </svg>
                   </button>
-                  <Link to='/'
+                  <button onClick={() => window.history.back()}
                     className="return-btn"
                   >
                     Back
-                  </Link>
+                  </button>
                 </div>
                 <div className="movie__selected">
                   <figure className="movie__selected--figure">
@@ -76,7 +77,7 @@ const MovieInfo = (props) => {
                           width="16"
                           height="16"
                           fill="currentColor"
-                          class="bi bi-play-fill"
+                          className="bi bi-play-fill"
                           viewBox="0 0 16 16"
                         >
                           <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393" />
@@ -108,7 +109,7 @@ const MovieInfo = (props) => {
             <div className="movies__container">
               <div className="row">
                 <div className="movie__selected--top">
-                  <Link to='/'
+                  <button onClick={() => window.history.back()}
                     className="return-btn"
                   >
                     {" "}
@@ -129,12 +130,12 @@ const MovieInfo = (props) => {
                         d="M12.354 1.646a.5.5 0 0 1 0 .708L6.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0"
                       />
                     </svg>
-                  </Link>
-                  <Link to='/'
+                  </button>
+                  <button onClick={() => window.history.back()}
                     className="return-btn"
                   >
                     Back
-                  </Link>
+                  </button>
                 </div>
                 <div className="movie__selected">
                   <figure className="movie__selected--figure">
@@ -153,7 +154,7 @@ const MovieInfo = (props) => {
                           width="16"
                           height="16"
                           fill="currentColor"
-                          class="bi bi-play-fill"
+                          className="bi bi-play-fill"
                           viewBox="0 0 16 16"
                         >
                           <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393" />

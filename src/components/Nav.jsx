@@ -20,12 +20,12 @@ const Nav = () => {
           </Link>
           </li>
           <li className="nav__link">
-            <a
-              href="#movie-search"
+            <Link
+              to='/search'
               className="nav__link--anchor link__hover-effect"
             >
-              Find your movie
-            </a>
+              Search
+            </Link>
           </li>
           <li className="nav__link">
           <button className="nav__link--anchor contact-btn" onClick={() => showAlert()}>Contact</button>

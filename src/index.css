@@ -518,7 +518,7 @@ header {
 */
 
 .movie__selected--title--skeleton {
-  width: 150px;
+  width: 250px;
   height: 30px;
   background-color: #ddd;
 }
@@ -565,6 +565,12 @@ header {
   height: 25px;
   margin-bottom: 12px; 
   background-color: lightgray;
+}
+
+@media (max-width: 920px) {
+  .movie__summary--para--skeleton {
+    width: 410px;
+  }
 }
 
 @media (max-width: 805px) {
@@ -624,7 +630,7 @@ header {
 
 }
 @media (max-width: 665px) {
-  .nav__link:not(:nth-child(3)) {
+  .nav__link:nth-child(1) {
     display: none;
   }
 
