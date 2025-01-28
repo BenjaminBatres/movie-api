@@ -65,12 +65,12 @@ const MovieInfo = (props) => {
                 </div>
                 <div className="movie__selected">
                   <figure className="movie__selected--figure">
-                    <div className="movie__selected--img"></div>
+                    <div className="movie__selected--img shimmer"></div>
                   </figure>
                   <div className="movie__selected--description">
-                    <h2 className="movie__selected--title--skeleton"></h2>
+                    <h2 className="movie__selected--title--skeleton shimmer"></h2>
                     <div className="movie__summary">
-                      <p className="movie__summary--para--skeleton"></p>
+                      <p className="movie__summary--para--skeleton shimmer"></p>
                       <button className="watch-btn--skeleton" onClick={() => showAlert()}>
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
@@ -86,14 +86,14 @@ const MovieInfo = (props) => {
                       </button>
                       <div className="movie__row--skeleton">
                         <div className="column--left">
-                        <p className="row-line--skeleton"></p>
-                        <p className="row-line--skeleton"></p>
-                        <p className="row-line--skeleton"></p>
+                        <p className="row-line--skeleton shimmer"></p>
+                        <p className="row-line--skeleton shimmer"></p>
+                        <p className="row-line--skeleton shimmer"></p>
                         </div>
                         <div className="column--right">
-                        <p className="row-line--skeleton"></p>
-                        <p className="row-line--skeleton"></p>
-                        <p className="row-line--skeleton"></p>
+                        <p className="row-line--skeleton shimmer"></p>
+                        <p className="row-line--skeleton shimmer"></p>
+                        <p className="row-line--skeleton shimmer"></p>
                         </div>
                       </div>
                     </div>
