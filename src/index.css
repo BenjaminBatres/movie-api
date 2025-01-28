@@ -171,7 +171,6 @@ nav {
 h1 {
   font-size: 48px;
   color: #882c6f;
-  background-color: rgba(0, 0, 0, 0.8);
 }
 
 /* 
@@ -661,11 +660,17 @@ header {
     display: none;
   }
 
+  .nav__link--anchor {
+    font-size: 14px;
+  }
+
   .container {
     padding-top: 24px;
   }
 
-  h1,
+  h1 {
+    font-size: 24px;
+  }
   .header__title {
     font-size: 30px;
   }
